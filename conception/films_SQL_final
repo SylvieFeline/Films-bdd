@@ -1,0 +1,90 @@
+DROP TABLE IF EXISTS Pays ;
+CREATE TABLE Pays (idPays INT AUTO_INCREMENT NOT NULL,
+nomPays VARCHAR,
+PRIMARY KEY (idPays)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Film ;
+CREATE TABLE Film (idFilm INT AUTO_INCREMENT NOT NULL,
+resumeFilm TEXT,
+anneeFilm DATE,
+dureeFilm INT,
+nomFilm VARCHAR,
+afficheFilm TEXT,
+lienBandeAnnonce TEXT,
+idUtilisateur INT,
+PRIMARY KEY (idFilm)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Utilisateur ;
+CREATE TABLE Utilisateur (idUtilisateur INT AUTO_INCREMENT NOT NULL,
+pseudoUtilisateur VARCHAR,
+PRIMARY KEY (idUtilisateur)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS genre ;
+CREATE TABLE genre (idGenre INT AUTO_INCREMENT NOT NULL,
+nomGenre VARCHAR,
+PRIMARY KEY (idGenre)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS personne ;
+CREATE TABLE personne (idPersonne INT AUTO_INCREMENT NOT NULL,
+nomPersonne VARCHAR,
+prenomPersonne_personne VARCHAR,
+idPays INT,
+PRIMARY KEY (idPersonne)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS motCle ;
+CREATE TABLE motCle (idMotCle INT AUTO_INCREMENT NOT NULL,
+motMotCle VARCHAR(55),
+PRIMARY KEY (idMotCle)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS vient_de ;
+CREATE TABLE vient_de (idPays INT AUTO_INCREMENT NOT NULL,
+idFilm INT NOT NULL,
+PRIMARY KEY (idPays,
+ idFilm)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS realise ;
+CREATE TABLE realise (idFilm INT AUTO_INCREMENT NOT NULL,
+idPersonne INT NOT NULL,
+PRIMARY KEY (idFilm,
+ idPersonne)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS est ;
+CREATE TABLE est (idFilm INT AUTO_INCREMENT NOT NULL,
+idGenre INT NOT NULL,
+PRIMARY KEY (idFilm,
+ idGenre)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS joue ;
+CREATE TABLE joue (idPersonne INT AUTO_INCREMENT NOT NULL,
+idFilm INT NOT NULL,
+roleDe_joue VARCHAR,
+PRIMARY KEY (idPersonne,
+ idFilm)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS ecrit ;
+CREATE TABLE ecrit (idFilm INT AUTO_INCREMENT NOT NULL,
+idPersonne INT NOT NULL,
+PRIMARY KEY (idFilm,
+ idPersonne)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS definit ;
+CREATE TABLE definit (idMotCle INT AUTO_INCREMENT NOT NULL,
+idFilm INT NOT NULL,
+PRIMARY KEY (idMotCle,
+ idFilm)) ENGINE=InnoDB;
+
+ALTER TABLE Film ADD CONSTRAINT FK_Film_idUtilisateur FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur (idUtilisateur);
+
+ALTER TABLE personne ADD CONSTRAINT FK_personne_idPays FOREIGN KEY (idPays) REFERENCES Pays (idPays);
+ALTER TABLE vient_de ADD CONSTRAINT FK_vient_de_idPays FOREIGN KEY (idPays) REFERENCES Pays (idPays);
+ALTER TABLE vient_de ADD CONSTRAINT FK_vient_de_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
+ALTER TABLE realise ADD CONSTRAINT FK_realise_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
+ALTER TABLE realise ADD CONSTRAINT FK_realise_idPersonne FOREIGN KEY (idPersonne) REFERENCES personne (idPersonne);
+ALTER TABLE est ADD CONSTRAINT FK_est_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
+ALTER TABLE est ADD CONSTRAINT FK_est_idGenre FOREIGN KEY (idGenre) REFERENCES genre (idGenre);
+ALTER TABLE joue ADD CONSTRAINT FK_joue_idPersonne FOREIGN KEY (idPersonne) REFERENCES personne (idPersonne);
+ALTER TABLE joue ADD CONSTRAINT FK_joue_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
+ALTER TABLE ecrit ADD CONSTRAINT FK_ecrit_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
+ALTER TABLE ecrit ADD CONSTRAINT FK_ecrit_idPersonne FOREIGN KEY (idPersonne) REFERENCES personne (idPersonne);
+ALTER TABLE definit ADD CONSTRAINT FK_definit_idMotCle FOREIGN KEY (idMotCle) REFERENCES motCle (idMotCle);
+ALTER TABLE definit ADD CONSTRAINT FK_definit_idFilm FOREIGN KEY (idFilm) REFERENCES Film (idFilm);
