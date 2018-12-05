@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Début en-tête-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="css/style.css">
-    <title>Filmathèque DCL </title>
-</head>
-<body>
-    
-    <header>
-        <h3>Films préférés des D Codeurs du Lac</h3>
-    </header>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Filmathèque DCL </title>
+    </head>
+    <!-- Fin en-tête -->
 
-    <main>
-        <h1>Recherche de films</h1>
+    <!-- Start corps de la page -->
+    <body>
+        <!-- Header -->
+        <header>
+            <img src="./images/entete.png" alt="Titre des D Codeurs du Lac" class="banner" />
+        </header>
 
-        <form action="" method="POST">
-
+        <!-- Début corps de le page -->
+        <main>
             
-                <label>Titre
-                    <input type="text" name="film">
-                </label>
-            
-                <label>Acteur
+            <!-- Formulaire de recherche -->
+            <form action="" method="POST">
+                
+                <div>
+                    <label for="title">Titre</label>
+                    <input type="text" name="film" id="title">
+                </div>
+                
+                <div>
+                    <label>Acteur</label>
                     <input type="text" name="acteur">
-                </label>
+                </div>
 
-                <label>Genre
-                    <select name="genre">
-                        <option value=""></option>
+                <div>
+                    <label>Genre</label>               
+                    <select name="genre" class="test">
+                        <?php
+                            echo '<option>' . 'nomOptionGenre' . '</option>';
+                        ?>
                     </select>
-                </label>
-            
-                <label>Réalisateur
+                </div>
+                
+                <div>
+                    <label>Réalisateur</label>
                     <input type="text" name="realisateur">
-                </label>
-            
-                <label>Société prod
-                    <input type="text" name="socProd">
-                </label>
-            
-                <label>Pays
-                    <select name="pays">
-                        <option value=""></option>
+                </div>
+                
+                <div>
+                    <label>Société de production</label>
+                    <select>
+                        <?php
+                                echo '<option>' . 'nomOptionSociété' . '</option>';
+                        ?>
                     </select>
-                </label>
+                </div>
+                
+                <div>
+                    <label>Pays</label>
+                    <select name="pays">
+                        <?php
+                            echo '<option>' . 'nomOptionPays' . '</option>';
+                        ?>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>Annee</label>
+                    <input type="text" name="annee" maxlength="4">
+                </div>
+                
+                <div>
+                    <label>Mots clés</label>
+                    <input type="text" name="motsCles"> <!-- Saisi d'entier uniquement -->
+                </div>
+                
             
-                <label>Annee
-                    <input type="number" name="annee" >
-                </label>
-            
-                <label>Mots clés
-                    <input type="text" name="motsCles">
-                </label>
-            
-                <input type="submit" value="Recherche">
-           
+                
+                <input type="submit" value="" class="btn-search">
 
-        </form>
-    </main>
+            </form>
+        </main>
 
-    <footer>
-    </footer>
 
-</body>
+        <!-- Début Footer -->
+        <footer>
+
+        </footer>
+        <!-- Fin Footer -->
+
+    </body>
+    <!-- Fin corps de la page -->
 </html>
+
+
+<!-- 
+    A faire:
+    ********
+
+        Saisie d'entier pour le text dans "année".
+        Rechercher comment lié le select à la base de donnée.
+
+ -->
