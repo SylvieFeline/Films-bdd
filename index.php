@@ -15,7 +15,11 @@
     <body>
         <!-- Header -->
         <header>
-            <img src="./images/entete.png" alt="Titre des D Codeurs du Lac" class="banner" />
+            <img src="./images/entete2.png" alt="Titre des D Codeurs du Lac" class="banner" /> <br />
+
+            <div>
+                <a href=""><img src="./images/ETmaison.png" alt="Retour maison" class="backHouse" title="Retour à l'acceuil"></a> <!-- Lien de redirection à définir -->
+            </div>
         </header>
 
         <!-- Début corps de le page -->
@@ -75,10 +79,10 @@
                     <label>Mots clés</label>
                     <input type="text" name="motsCles"> <!-- Saisi d'entier uniquement -->
                 </div>
-                
-            
-                
-                <input type="submit" value="" class="btn-search">
+                             
+                <div>
+                    <input type="submit" value="" class="btn-search">
+                </div>
 
             </form>
         </main>
@@ -86,7 +90,7 @@
 
         <!-- Début Footer -->
         <footer>
-
+            <p>Copyright&copy; 2018 <em>les D Codeur du Lac</em></p>
         </footer>
         <!-- Fin Footer -->
 

@@ -1,43 +1,80 @@
+/* ***************** GESTION DES ELEMENTS PRINCIPAUX ****************** */
 *
 {
     padding: 0;
     margin: 0;
 }
-body{
-    background-image: linear-gradient(rgb(216, 69, 69),rgb(230, 150, 150));
+
+body
+{
+    background-image:
+    url("./../images/bandePellicule.png"), /* Bande pélicule gauche */
+    url("./../images/bandePellicule.png"), /* Bande pélicule droite */
+    linear-gradient(rgb(216, 79, 69),rgb(250, 150, 150)); /* Fond principal en dégradé */
+    background-position: left, right, center;
+    background-attachment: scroll, scroll, fixed;
+    background-repeat: repeat-y, repeat-y, no-repeat;
+    background-size: 5%, 5%, 100%;
     width: 100%;
     height: 100vh;
 }
 
-h1{
+h1
+{
     text-align: center;
     font-family: 'Segoe UI';
 }
 
+/* ****************** GESTION DU HEADER ****************** */
+
 header
 {
     text-align: center;
+    margin-bottom: 5%;
 }
 
-main
+/* Bouton, retour maison */
+header > div 
 {
-    text-align: center;
+    position: absolute;
+    margin-left: 72%;
+    margin-top: 20%;
+    width: 10%;
+    top: 0%;
+    left: 0%;
 }
 
-.banner /* Gestion de l'image titre */
+.backHouse /* Logo, retour maison */
+{
+    width: 100%;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px black;
+}
+
+.backHouse:hover
+{
+    margin-top: px;
+    margin-left: 5px;
+    box-shadow: 3px 3px 5px black;
+}
+
+/* Image de titre : "D codeur du Lac" */
+.banner 
 {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 85%;
+    text-align: center;
 }
 
-/* Gestion du formulaire */
-
+/* ****************** GESTION DU FORMUlAIRE ****************** */
 form
 {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    width: 85%;
+    width: 75%;
     margin: auto;
     color: grey;
 }
@@ -45,7 +82,7 @@ form
 form > div
 {
     border-radius: 10px;
-    width: 100%;
+    width: 95%;
     height: 40px;
     background-color: white;
     display: flex;
@@ -73,6 +110,14 @@ select, input
     height: 100%;
 }
 
+form > div:last-child /* Focus sur la div du bouton Envoyer*/
+{
+    background: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+}
+
 .btn-search
 {
     background: none;
@@ -80,5 +125,12 @@ select, input
     background-repeat: no-repeat;
     width: 200px;
     height: 49px;
+}
 
+/* ****************** GESTION DU FOOTER ****************** */
+footer
+{
+    margin-top: 5%;
+    font-size: 0.8em;
+    text-align: center;
 }
