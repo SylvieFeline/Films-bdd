@@ -96,7 +96,7 @@ form > div
     height: 35px;
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-bottom: 3%;
 }
@@ -104,11 +104,12 @@ form > div
 label
 {
     height: 100%;
-    width: 46%;
+    width: 40%;
     line-height: 35px;
     text-align: left;
     font-size: 0.65em;
     border-right: 1px dotted grey;
+    text-indent: 5%;
 }
 
 select, input
@@ -116,9 +117,14 @@ select, input
     -webkit-appearance: none; /* Retirer la flèche de la liste déroulante */
     font-size: 0.65em;
     height: 100%;
-    width: 45%;
     border: none;
+    border-radius: 10px;
     background-color: white;
+    width: 60%;
+}
+select
+{
+    text-align: center;
 }
 
 form > div:last-child /* Focus sur la div du bouton Envoyer*/

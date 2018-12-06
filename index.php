@@ -35,6 +35,7 @@
                 <div>
                     <label for="genre">Genre</label>               
                     <select name="genre" class="test" id="genre">
+                    	<option checked></option>
                         <?php afficheOptionGenre(); ?> <!-- Affiche le genre des films existants dans la BDD -->
                     </select>
                 </div>
