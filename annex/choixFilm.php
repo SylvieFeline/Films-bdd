@@ -20,7 +20,7 @@
 		<main>
 			<h1>Votre recherche</h1>
 
-			<p>Genre : <?php echo 'genre'; ?></p>
+			<p>Genre : <?php echo $_POST['genre']; ?></p>
 
 			<div id="filmPoster">
 				<?php
