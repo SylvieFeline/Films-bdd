@@ -62,12 +62,12 @@
                 
                 <div>
                     <label>Annee</label>
-                    <input type="text" name="annee" maxlength="4">
+                    <input type="text" name="annee" maxlength="4"> <!-- Saisi d'entier uniquement -->
                 </div>
                 
                 <div>
                     <label>Mots clés</label>
-                    <input type="text" name="motsCles"> <!-- Saisi d'entier uniquement -->
+                    <input type="text" name="motsCles"> 
                 </div>
                              
                 <div>
@@ -87,13 +87,3 @@
     </body>
     <!-- Fin corps de la page -->
 </html>
-
-
-<!-- 
-    A faire:
-    ********
-
-        Saisie d'entier pour le text dans "année".
-        Rechercher comment lié le select à la base de donnée.
-
- -->
