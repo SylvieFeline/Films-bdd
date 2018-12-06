@@ -7,5 +7,5 @@
         <a href=""><img src="./images/ETmaison.png" alt="Retour maison" class="backHouse" title="Retour à l'acceuil"></a> <!-- Lien de redirection à définir -->
     </div>
 
-    <h1>Recherche de film</h1>
+    
 </header>

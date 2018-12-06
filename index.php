@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/style.css">
         <title>Filmathèque DCL</title>
+        <?php include("./logbdd.php"); ?>
+        <?php include("./requestBdd.php"); ?>
     </head>
     <!-- Fin en-tête -->
 
@@ -15,25 +17,25 @@
 
         <!-- Main -->
         <main> 
+        	<h1>Recherche de film</h1>
+        	
             <!-- Formulaire de recherche -->
             <form action="annex/choixFilm.php" method="POST">
                 
                 <div>
-                    <label for="title">Titre</label>
-                    <input type="text" name="film" id="title">
+                    <label for="titre">Titre</label>
+                    <input type="text" name="film" id="titre">
                 </div>
                 
                 <div>
-                    <label>Acteur</label>
-                    <input type="text" name="acteur">
+                    <label for="acteur">Acteur</label>
+                    <input type="text" name="acteur" id="acteur">
                 </div>
 
                 <div>
-                    <label>Genre</label>               
-                    <select name="genre" class="test">
-                        <?php
-                            echo '<option>' . 'nomOptionGenre' . '</option>';
-                        ?>
+                    <label for="genre">Genre</label>               
+                    <select name="genre" class="test" id="genre">
+                        <?php afficheOptionGenre(); ?> <!-- Affiche le genre des films existants dans la BDD -->
                     </select>
                 </div>
                 
@@ -44,25 +46,21 @@
                 
                 <div>
                     <label>Société de production</label>
-                    <select>
-                        <?php
-                                echo '<option>' . 'nomOptionSociété' . '</option>';
-                        ?>
+                    <select> 
+                        <?php afficheOptionSocProd(); ?> <!-- Affiche les sociétés de production existantes dans la BDD-->
                     </select>
                 </div>
                 
                 <div>
                     <label>Pays</label>
                     <select name="pays">
-                        <?php
-                            echo '<option>' . 'nomOptionPays' . '</option>';
-                        ?>
+                        <?php afficheOptionPays(); ?> <!-- Affiche les pays existants dans la BDD -->
                     </select>
                 </div>
                 
                 <div>
                     <label>Annee</label>
-                    <input type="text" name="annee" maxlength="4"> <!-- Saisi d'entier uniquement -->
+                    <input type="text" name="annee" maxlength="4"> <!-- Saisi d'entier uniquement (à faire en JS )-->
                 </div>
                 
                 <div>

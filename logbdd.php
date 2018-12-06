@@ -1,17 +1,20 @@
-<form method="POST" action="index.php">
+<?php
+	function connectBdd()
+	{
+		$dbn = "mysql:dbname=filmBdd;host=127.0.0.1";
+		$user = "dcl.edainsv";
+		$pass = "TPdev_log";
 
-	<fieldset>
-		<legend>Connexion à la base de donnée</legend>
+		try
+		{
+			$bdd = new PDO($dbn, $user, $pass);
+			echo "Tu es connecté";			
+		}
+		catch (PDOException $e)
+		{
+			echo "Connexion à la base de donnée échouée : " . $e->getMessage();
+		}
 
-		<label>Utilisateur : </label>
-		<input type="text" name="user"> <br />
-
-		<label>Mot de passe : </label>
-		<input type="password" name="password"> <br/>
-
-		<input type="hidden" name="nameBdd" value="mysql:dbname=filmBdd;host=127.0.0.1">
-
-		<input type="submit" name="subm" value="Connexion">
-	</fieldset>
-	
-</form>
+		return $bdd;
+	}
+?>
