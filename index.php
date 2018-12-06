@@ -3,30 +3,20 @@
     <!-- Début en-tête-->
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-        <link rel="stylesheet" href="css/style.css">
-        <title>Filmathèque DCL </title>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Filmathèque DCL</title>
     </head>
     <!-- Fin en-tête -->
 
     <!-- Start corps de la page -->
     <body>
         <!-- Header -->
-        <header>
-            <img src="./images/entete2.png" alt="Titre des D Codeurs du Lac" class="banner" /> <br />
+        <?php include ("./annex/header.php"); ?>
 
-            <div>
-                <a href=""><img src="./images/ETmaison.png" alt="Retour maison" class="backHouse" title="Retour à l'acceuil"></a> <!-- Lien de redirection à définir -->
-            </div>
-        </header>
-
-        <!-- Début corps de le page -->
-        <main>
-            
+        <!-- Main -->
+        <main> 
             <!-- Formulaire de recherche -->
-            <form action="" method="POST">
+            <form action="annex/choixFilm.php" method="POST">
                 
                 <div>
                     <label for="title">Titre</label>

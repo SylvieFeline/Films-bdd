@@ -10,7 +10,7 @@ body
     background-image:
     url("./../images/bandePellicule.png"), /* Bande pélicule gauche */
     url("./../images/bandePellicule.png"), /* Bande pélicule droite */
-    linear-gradient(rgb(216, 79, 69),rgb(250, 150, 150)); /* Fond principal en dégradé */
+    linear-gradient(#e60c0c, #f92b2b); /* Fond principal en dégradé */
     background-position: left, right, center;
     background-attachment: scroll, scroll, fixed;
     background-repeat: repeat-y, repeat-y, no-repeat;
@@ -19,8 +19,17 @@ body
     height: 100vh;
 }
 
+header, main
+{
+
+    padding-top: 3%;
+    margin: auto;
+    width: 85%;
+}
+
 h1
 {
+    margin-top: 5%;
     text-align: center;
     font-family: 'Segoe UI';
 }
@@ -38,10 +47,19 @@ header > div
 {
     position: absolute;
     margin-left: 72%;
-    margin-top: 20%;
+    margin-top: 23%;
     width: 10%;
     top: 0%;
     left: 0%;
+}
+
+/* Image de titre : "D codeur du Lac" */
+.banner 
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 95%;
+    text-align: center;
 }
 
 .backHouse /* Logo, retour maison */
@@ -52,20 +70,11 @@ header > div
     box-shadow: 5px 5px 10px black;
 }
 
-.backHouse:hover
+.backHouse:hover /* Effet d'enfoncement sur le bouton */
 {
-    margin-top: px;
+    margin-top: 5px;
     margin-left: 5px;
-    box-shadow: 3px 3px 5px black;
-}
-
-/* Image de titre : "D codeur du Lac" */
-.banner 
-{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 85%;
-    text-align: center;
+    box-shadow: 3px 3px 8px black;
 }
 
 /* ****************** GESTION DU FORMUlAIRE ****************** */
@@ -74,7 +83,7 @@ form
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 75%;
+    width: 85%;
     margin: auto;
     color: grey;
 }
