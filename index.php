@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Filmathèque DCL</title>
     <?php include("./logbdd.php"); ?>
@@ -25,21 +25,13 @@
         <!-- Formulaire de choix -->
         <form action="#" method="POST">
             
-            <div>
-                <input type="submit" value="recherche" name="recherche" class="btn-search">
-            </div>
+                <input type="submit" value="" name="recherche" class="btn-search">
             
-            <div>
-                <input type="submit" value="modifier" name="modifier" class="btn-search">
-            </div>
+                <input type="submit" value="" name="modifier" class="btn-search">
 
-            <div>
-                <input type="submit" value="ajouter"  name="ajouter" class="btn-search">
-            </div>
+                <input type="submit" value=""  name="ajouter" class="btn-search">
 
-            <div>
-                <input type="submit" value="connexion" class="btn-search">
-            </div>
+                <input type="submit" value="" class="btn-search">
 
         </form>
     </main>
