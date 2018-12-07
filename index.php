@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- lien CSS principal -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- lien CSS de la page -->
+    <link rel="stylesheet" href="./css/styleAccueil.css">
+
+    <!-- Police google font  -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+
 
     <title>Filmathèque DCL</title>
     <?php include("./logbdd.php"); ?>
@@ -20,20 +29,25 @@
 
     <!-- Main -->
     <main>   
-        <h1>Bienvenue</h1>
+        <h2>Bienvenue</h2>
 
-        <!-- Formulaire de choix -->
-        <form action="#" method="POST">
-            
-                <input type="submit" value="" name="recherche" class="btn-search">
-            
-                <input type="submit" value="" name="modifier" class="btn-search">
+        <!-- Choix -->
+        <div id="choix">
 
-                <input type="submit" value=""  name="ajouter" class="btn-search">
+            <a href="./annex/recherche.php"><input type="button" value="Rechercher" class="choix">
+            </a>
 
-                <input type="submit" value="" class="btn-search">
+            <a href="#"><input type="button" value="Modifier" class="choix">
+            </a>
 
-        </form>
+            <a href="#"><input type="button" value="Ajouter" class="choix">
+            </a>
+
+            <a href="#"><input type="button" value="Connexion" class="choix">
+            </a>
+
+        </div>
+
     </main>
     <!-- Début Footer -->
     <footer>
