@@ -2,8 +2,8 @@
 	function connectBdd()
 	{
 		$dbn = "mysql:dbname=filmBdd;host=127.0.0.1";
-		$user = "dcl.francisy";
-		$pass = "+Carpediem18";
+		$user = "dcl.edainsv";
+		$pass = "TPdev_log";
 
 		try
 		{
