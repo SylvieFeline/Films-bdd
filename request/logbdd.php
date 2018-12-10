@@ -11,7 +11,7 @@
 		try
 		{
 			$bdd = new PDO($dbn, $user, $pass);
-			echo "Tu es connecté";	
+			// echo "Tu es connecté";
 
 		}
 		catch (PDOException $e)

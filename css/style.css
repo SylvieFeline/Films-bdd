@@ -100,20 +100,3 @@ footer
     font-size: 0.8em;
     text-align: center;
 }
-
-
-/* *************************************************** */
-/* ************** GESTION choixFilm.php ************** */
-/* *************************************************** */
-#filmPoster
-{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-#filmPoster > img
-{
-    width: 40%;
-}

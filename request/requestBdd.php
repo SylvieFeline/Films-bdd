@@ -49,7 +49,7 @@
 	{
 		if (isset($_POST['submRecherche']))
 		{
-			$requete = 'SELECT titre FROM film WHERE titre="' . $_POST['titre'] .'"';
+			$requete = 'SELECT nomFilm, anneeFilm,  FROM film WHERE titre="' . $_POST['titre'] .'"';
 
 			$bdd = connectbdd();
 
