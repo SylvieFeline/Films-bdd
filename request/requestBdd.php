@@ -1,3 +1,8 @@
+<?php 
+	include("logbdd.php");
+?>
+
+	<!-- AFFICHER LES VALEUR DE LA BASE DE DONNE DANS DES OPTIONS -->
 <?php
 	
 	function afficheOptionGenre() // Affiche le genre des films existants dans la BDD //
@@ -37,4 +42,24 @@
 
 	}
 
+?>
+	<!-- DEMANDE DE REQUÊTE EN FONCTION DE LA SAISIE EN INPUT -->
+<?php
+	function rechercheFilm()
+	{
+		if (isset($_POST['submRecherche']))
+		{
+			$requete = 'SELECT titre FROM film WHERE titre="' . $_POST['titre'] .'"';
+
+			$bdd = connectbdd();
+
+			$req = $bdd->query($requete);
+
+			while ($message = $req->fetch())
+			{
+				
+			}
+			
+		}
+	}
 ?>

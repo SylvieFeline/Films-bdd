@@ -17,8 +17,6 @@
 
 
     <title>Filmathèque DCL</title>
-    <?php include("./logbdd.php"); ?>
-    <?php include("./requestBdd.php"); ?>
     <!-- Fin en-tête -->
 
 </head>
@@ -46,7 +44,7 @@
 
             <a href="#"><input type="button" value="Ajouter" class="choix"></a>
 
-            <a href="#"><input type="button" value="Connexion" class="choix"></a>
+            <a href="./annex/connexion.php"><input type="button" value="Connexion" class="choix" id="connexion"></a>
 
         </div>
 
@@ -60,3 +58,4 @@
     </body>
     <!-- Fin corps de la page -->
 </html>
+

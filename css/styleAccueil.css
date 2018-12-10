@@ -45,3 +45,8 @@ footer {
     font-size: 1.5em;
     margin-top: 10%;
 }
+
+a
+{
+    text-decoration: none;
+}

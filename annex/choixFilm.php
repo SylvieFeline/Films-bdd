@@ -22,7 +22,10 @@
 
 			<p>Genre : <?php echo $_POST['genre']; ?></p>
 
-			
+
+			<?php
+			include("./../request/requestBdd.php");
+			?>
 
 			<div id="filmPoster">
 

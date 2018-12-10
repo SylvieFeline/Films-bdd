@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="./../css/style.css">
         <link rel="stylesheet" href="./../css/styleRecherche.css">
         <title>Filmathèque DCL</title>
-        <?php include("./../request/logbdd.php"); ?>
         <?php include("./../request/requestBdd.php"); ?>
     </head>
     <!-- Fin en-tête -->
@@ -35,43 +34,45 @@
 
                 <div>
                     <label for="genre">Genre</label>               
-                    <select name="genre" class="test" id="genre">
-                    	<option checked></option>
-                        <?php afficheOptionGenre(); ?> <!-- Affiche le genre des films existants dans la BDD -->
-                    </select>
+                        <select name="genre" id="genre">
+                        	<option checked></option>
+                            <?php afficheOptionGenre(); ?> <!-- Affiche le genre des films existants dans la BDD -->
+                        </select>
                 </div>
                 
                 <div>
-                    <label>Réalisateur</label>
-                    <input type="text" name="realisateur">
+                    <label for="realisateur">Réalisateur</label>
+                    <input type="text" name="realisateur" id="realisateur">
                 </div>
                 
                 <div>
-                    <label>Société de production</label>
-                    <select> 
-                        <?php afficheOptionSocProd(); ?> <!-- Affiche les sociétés de production existantes dans la BDD-->
-                    </select>
+                    <label for="socProd">Société de production</label>
+                        <select name="socProd" id="socProd">
+                            <option checked></option>
+                            <?php afficheOptionSocProd(); ?> <!-- Affiche les sociétés de production existantes dans la BDD-->
+                        </select>
                 </div>
                 
                 <div>
-                    <label>Pays</label>
-                    <select name="pays">
-                        <?php afficheOptionPays(); ?> <!-- Affiche les pays existants dans la BDD -->
-                    </select>
+                    <label for="pays">Pays</label>
+                        <select name="pays" id="pays">
+                            <option checked></option>
+                            <?php afficheOptionPays(); ?> <!-- Affiche les pays existants dans la BDD -->
+                        </select>
                 </div>
                 
                 <div>
-                    <label>Annee</label>
-                    <input type="text" name="annee" maxlength="4"> <!-- Saisi d'entier uniquement (à faire en JS )-->
+                    <label for="annee">Annee</label>
+                    <input type="text" name="annee" maxlength="4" id="annee"> <!-- Saisi d'entier uniquement (à faire en JS )-->
                 </div>
                 
                 <div>
-                    <label>Mots clés</label>
-                    <input type="text" name="motsCles"> 
+                    <label for="keysearch">Mots clés</label>
+                    <input type="text" name="motsCles" id="keysearch"> 
                 </div>
                              
                 <div>
-                    <input type="submit" value="" class="btn-search">
+                    <input type="submit" value="" class="btn-search" name="submRecherche">
                 </div>
 
             </form>
