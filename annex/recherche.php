@@ -4,9 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./../css/style.css">
+        <link rel="stylesheet" href="./../css/styleRecherche.css">
         <title>Filmathèque DCL</title>
-        <?php include("./../logbdd.php"); ?>
-        <?php include("./../requestBdd.php"); ?>
+        <?php include("./../request/logbdd.php"); ?>
+        <?php include("./../request/requestBdd.php"); ?>
     </head>
     <!-- Fin en-tête -->
 

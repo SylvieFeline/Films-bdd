@@ -25,7 +25,13 @@
 <!-- Start corps de la page -->
 <body>
     <!-- Header -->
-    <?php include ("./annex/header.php"); ?>
+    <header>
+        <img src="./images/entete2.png" alt="Titre des D Codeurs du Lac" class="banner" /> <br />
+
+        <div>
+            <a href="./index.php"><img src="./images/ETmaison.png" alt="Retour maison" class="backHouse" title="Retour à l'accueil"></a>
+        </div>
+    </header>
 
     <!-- Main -->
     <main>   
@@ -34,17 +40,13 @@
         <!-- Choix -->
         <div id="choix">
 
-            <a href="./annex/recherche.php"><input type="button" value="Rechercher" class="choix">
-            </a>
+            <a href="./annex/recherche.php"><input type="button" value="Rechercher" class="choix"></a>
 
-            <a href="#"><input type="button" value="Modifier" class="choix">
-            </a>
+            <a href="#"><input type="button" value="Modifier" class="choix"></a>
 
-            <a href="#"><input type="button" value="Ajouter" class="choix">
-            </a>
+            <a href="#"><input type="button" value="Ajouter" class="choix"></a>
 
-            <a href="#"><input type="button" value="Connexion" class="choix">
-            </a>
+            <a href="#"><input type="button" value="Connexion" class="choix"></a>
 
         </div>
 

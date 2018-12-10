@@ -22,21 +22,10 @@
 
 			<p>Genre : <?php echo $_POST['genre']; ?></p>
 
+			
+
 			<div id="filmPoster">
-				<?php
-					include("./../logbdd.php");
-					$bdd = connectbdd();
 
-					$requete = $bdd -> query('SELECT afficheFilm FROM film JOIN realise JOIN personne ON (film.idFilm = realise.idFilm AND realise.idPersonne = personne.idPersonne) WHERE nomPersonne LIKE "Brooks"');
-
-					while ($data = $requete -> fetch())
-					{
-						echo '<h2>' . $data['nomFilm'] . '</h2>';
-						echo '<img src="' . $data['afficheFilm'] . '" alt ="Affiche du film"/>';
-					}
-
-					$requete -> closeCursor();
-				?>
 			</div>
 		</main>
 	</body>
